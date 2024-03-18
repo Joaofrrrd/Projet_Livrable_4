@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Public/style.css">
+    <title>Pokémon</title>
+</head>
+
+<body>
+    <button type="button" onclick="showCreatePokemonForm()">Créer un Pokémon</button>
+    <div id="createPokemonForm" style="display: none;">
+        <input type="text" id="pokemonName" placeholder="Nom du Pokémon">
+        <input type="text" id="pokemonImage" placeholder="URL de l'image du Pokémon">
+        <button type="button" onclick="createPokemon()">Créer</button>
+    </div>
+
+    <button type="button" onclick="showEditPokemonForm()">Modifier le Pokémon sélectionné</button>
+
+    <div id="editPokemonForm" style="display: none;">
+        <input type="text" id="editedPokemonName" placeholder="Nouveau nom du Pokémon">
+        <input type="text" id="editedPokemonImage" placeholder="Nouvelle URL de l'image du Pokémon">
+        <button type="button" onclick="editSelectedPokemon()">Enregistrer</button>
+        <button type="button" onclick="cancelEdit()">Annuler</button>
+    </div>
+
+
+    <button type="button" onclick="deleteSelectedPokemon()">Supprimer le Pokémon sélectionné</button>
+
+    <div id="wrapper">
+        <div id="pokemon-list" onclick="selectPokemon(event)"></div>
+    </div>
+    <script src="../Controllers/app.js"></script>
+    <script>
+        window.onload = function () {
+            fetchAllPokemons();
+        };
+    </script>
+</body>
+
+</html>

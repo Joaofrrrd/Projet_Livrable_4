@@ -1,0 +1,25 @@
+.pokemon {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    background-color: white;
+}
+
+.pokemon.selected {
+    border: 2px solid red;
+}
+
+body {
+    background-color: yellow;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+}
+
+.pokemon img {
+    width: 100px;
+    height: auto;
+}
